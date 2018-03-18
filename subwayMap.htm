@@ -9,7 +9,10 @@
         font-family: Verdana;
         font-size: 8pt;
     }
-
+    #main{
+        width: 500px;
+        margin:0 auto;
+    }
     /* The main DIV for the map */
     .subway-map
     {
@@ -50,26 +53,29 @@
     </style>
 </head>
 <body>
-    <div class="subway-map" data-columns="12" data-rows="10" data-cellSize="40" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="true" data-lineWidth="8">
-        <ul data-color="#ff4db2" data-label="jQuery Widgets">          
-            <li data-coords="2,2" data-marker="interchange">
-                <a href="http://jqueryui.com/demos/accordion/">Accordion</a>
-            </li>
-            <li data-coords="4,2">
-                <a href="http://jqueryui.com/demos/autocomplete/">
-                    <a href="http://jqueryui.com/demos/autocomplete/">Auto\ncomplete</a>
-                </a>
-            </li>
-            <li data-coords="5,3" data-dir="E"></li>
-            <li data-coords="5,5" data-label=""><a href="#">self</a></li>
-            <li data-coords="6,6" data-dir="S"></li>
-        </ul>
-  </div>
-    <div id="legend"></div>
+    <div id="main">
+        <div class="subway-map" data-columns="12" data-rows="10" data-cellSize="40" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="true" data-lineWidth="8">
+            <ul data-color="#ff4db2" data-label="jQuery Widgets">
+                <li data-coords="2,2" data-marker="interchange">
+                    <a href="http://jqueryui.com/demos/accordion/">Accordion</a>
+                </li>
+                <li data-coords="4,2">
+                    <a href="http://jqueryui.com/demos/autocomplete/">
+                        <a href="http://jqueryui.com/demos/autocomplete/">Auto\ncomplete</a>
+                    </a>
+                </li>
+                <li data-coords="5,3" data-dir="E"></li>
+                <li data-coords="5,5" data-label=""><a href="#">self</a></li>
+                <li data-coords="6,6" data-dir="S"></li>
+            </ul>
+        </div>
+        <div id="legend"></div>
+    </div>
     
 
     <script type="text/javascript">
         $(".subway-map").subwayMap({ debug: true });
+
     </script>
 </body>
 </html>
